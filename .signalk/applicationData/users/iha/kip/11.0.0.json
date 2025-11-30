@@ -1,0 +1,1331 @@
+{
+  "default": {
+    "app": {
+      "configVersion": 12,
+      "autoNightMode": false,
+      "redNightMode": true,
+      "nightModeBrightness": 0.27,
+      "isRemoteControl": false,
+      "instanceName": "",
+      "dataSets": [],
+      "unitDefaults": {
+        "Unitless": "unitless",
+        "Speed": "knots",
+        "Flow": "l/h",
+        "Temperature": "celsius",
+        "Length": "m",
+        "Volume": "liter",
+        "Current": "A",
+        "Potential": "V",
+        "Charge": "C",
+        "Power": "W",
+        "Energy": "J",
+        "Pressure": "mmHg",
+        "Fuel Distance": "nm/l",
+        "Energy Distance": "nm/kWh",
+        "Density": "kg/m3",
+        "Time": "Hours",
+        "Angular Velocity": "deg/min",
+        "Angle": "deg",
+        "Frequency": "Hz",
+        "Ratio": "ratio",
+        "Resistance": "ohm"
+      },
+      "notificationConfig": {
+        "disableNotifications": false,
+        "menuGrouping": true,
+        "security": {
+          "disableSecurity": true
+        },
+        "devices": {
+          "disableDevices": false,
+          "showNormalState": false,
+          "showNominalState": false
+        },
+        "sound": {
+          "disableSound": false,
+          "muteNormal": true,
+          "muteNominal": true,
+          "muteWarn": true,
+          "muteAlert": false,
+          "muteAlarm": false,
+          "muteEmergency": false
+        }
+      },
+      "splitShellEnabled": false,
+      "splitShellSide": "left",
+      "splitShellWidth": 0.5,
+      "splitShellSwipeDisabled": false
+    },
+    "dashboards": [
+      {
+        "id": "37cc8bb3-32a1-4541-823b-5fecf26be2f1",
+        "name": "Electrical",
+        "icon": "dashboard-car-battery",
+        "configuration": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 7,
+            "h": 2,
+            "minW": 1,
+            "minH": 1,
+            "id": "30fd5d0d-df42-4bed-a0c4-89d903d38237",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-label",
+                "uuid": "30fd5d0d-df42-4bed-a0c4-89d903d38237",
+                "config": {
+                  "displayName": "Forbrug",
+                  "color": "contrast",
+                  "bgColor": "blue",
+                  "noColor": false,
+                  "noBgColor": true
+                }
+              }
+            }
+          },
+          {
+            "w": 7,
+            "h": 2,
+            "id": "b01a95e8-56e5-40c5-8dab-073b50d7d6ce",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-label",
+                "uuid": "b01a95e8-56e5-40c5-8dab-073b50d7d6ce",
+                "config": {
+                  "displayName": "Start",
+                  "color": "contrast",
+                  "bgColor": "grey",
+                  "noColor": false,
+                  "noBgColor": true
+                }
+              }
+            },
+            "x": 7,
+            "y": 0
+          },
+          {
+            "w": 3,
+            "h": 6,
+            "id": "ba4673b4-669c-44e9-b365-615a8ef19220",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "ba4673b4-669c-44e9-b365-615a8ef19220",
+                "config": {
+                  "displayName": "Voltage",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.house.voltage",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "V",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": 4,
+                    "upper": 15,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "left",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            },
+            "x": 0,
+            "y": 2
+          },
+          {
+            "x": 3,
+            "y": 2,
+            "w": 3,
+            "h": 6,
+            "minW": 1,
+            "minH": 1,
+            "id": "fe2deba6-7d7e-4d08-8db8-17df88a6b266",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "fe2deba6-7d7e-4d08-8db8-17df88a6b266",
+                "config": {
+                  "displayName": "Amps",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.house.current",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "A",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -10,
+                    "upper": 10,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "middle",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "x": 6,
+            "y": 2,
+            "h": 6,
+            "minW": 1,
+            "minH": 1,
+            "id": "ac58c1a5-3755-472a-b63b-e2a646b6149c",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-linear",
+                "uuid": "ac58c1a5-3755-472a-b63b-e2a646b6149c",
+                "config": {
+                  "displayName": "Temperatur",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.house.temperature",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "celsius",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -5,
+                    "upper": 40,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngLinear",
+                    "subType": "vertical",
+                    "highlightsWidth": 5,
+                    "enableTicks": true,
+                    "enableNeedle": false
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "color": "green",
+                  "enableTimeout": false,
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "x": 7,
+            "y": 2,
+            "w": 3,
+            "h": 6,
+            "minW": 1,
+            "minH": 1,
+            "id": "3faea66c-bb62-41e4-84d8-c6c2b060f638",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "3faea66c-bb62-41e4-84d8-c6c2b060f638",
+                "config": {
+                  "displayName": "Voltage",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.starter.voltage",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "V",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": 4,
+                    "upper": 15,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "left",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "w": 3,
+            "h": 6,
+            "id": "4d676810-3d1b-4239-a093-51671b4bf078",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "4d676810-3d1b-4239-a093-51671b4bf078",
+                "config": {
+                  "displayName": "Amps",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.starter.current",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "A",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -10,
+                    "upper": 10,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "middle",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            },
+            "x": 10,
+            "y": 2
+          },
+          {
+            "h": 6,
+            "id": "e4ae0783-53ef-40df-a5ec-e0ecea1e7f04",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-linear",
+                "uuid": "e4ae0783-53ef-40df-a5ec-e0ecea1e7f04",
+                "config": {
+                  "displayName": "Temperatur",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.starter.temperature",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "celsius",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -5,
+                    "upper": 40,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngLinear",
+                    "subType": "vertical",
+                    "highlightsWidth": 5,
+                    "enableTicks": true,
+                    "enableNeedle": false
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "color": "green",
+                  "enableTimeout": false,
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            },
+            "x": 13,
+            "y": 2
+          },
+          {
+            "x": 0,
+            "y": 8,
+            "w": 3,
+            "h": 6,
+            "minW": 1,
+            "minH": 1,
+            "id": "cd8c30f4-a7fd-465f-b298-fd932cd13579",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "cd8c30f4-a7fd-465f-b298-fd932cd13579",
+                "config": {
+                  "displayName": "Forbrug",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.house.power",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "W",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": 0,
+                    "upper": 100,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "left",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 0,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "x": 7,
+            "y": 8,
+            "w": 3,
+            "h": 6,
+            "minW": 1,
+            "minH": 1,
+            "id": "27aeda08-fd63-4c15-a1e2-7056c4aa9b6d",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "27aeda08-fd63-4c15-a1e2-7056c4aa9b6d",
+                "config": {
+                  "displayName": "Forbrug",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.starter.power",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "W",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": 0,
+                    "upper": 100,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "left",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 0,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "x": 0,
+            "y": 22,
+            "w": 7,
+            "h": 2,
+            "minW": 1,
+            "minH": 1,
+            "id": "786ed2eb-04a7-420a-a7eb-33e9ee8ba33d",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-iframe",
+                "uuid": "786ed2eb-04a7-420a-a7eb-33e9ee8ba33d",
+                "config": {
+                  "widgetUrl": "http://localhost:3000/plugins/signalk-node-red/redApi/dashboard/page1",
+                  "allowInput": false
+                }
+              }
+            }
+          }
+        ],
+        "collapseSplitShell": false
+      },
+      {
+        "id": "96e722ec-f77a-4da6-a805-ef8967a3a420",
+        "name": "Engine",
+        "icon": "dashboard-engine",
+        "configuration": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 4,
+            "h": 7,
+            "minW": 1,
+            "minH": 1,
+            "id": "8bad0aa0-6864-45c3-a55c-e2589027a964",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "8bad0aa0-6864-45c3-a55c-e2589027a964",
+                "config": {
+                  "displayName": "RMP",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.propulsion.main.revolutions",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "rpm",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": 0,
+                    "upper": 5000,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "left",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 0,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "w": 4,
+            "h": 7,
+            "minW": 1,
+            "minH": 1,
+            "id": "223e19a3-4d68-4180-bd36-b912fd78635e",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "223e19a3-4d68-4180-bd36-b912fd78635e",
+                "config": {
+                  "displayName": "Kølevand",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.propulsion.main.coolantTemperature",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "celsius",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": 0,
+                    "upper": 120,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "left",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 0,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "x": 4,
+            "y": 7,
+            "w": 4,
+            "h": 2,
+            "minW": 1,
+            "minH": 1,
+            "id": "513674a1-c26d-4c47-8509-c34f093c36ed",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-label",
+                "uuid": "513674a1-c26d-4c47-8509-c34f093c36ed",
+                "config": {
+                  "displayName": "Saltvands Køling",
+                  "color": "green",
+                  "bgColor": "grey",
+                  "noColor": false,
+                  "noBgColor": true
+                }
+              }
+            }
+          },
+          {
+            "w": 4,
+            "h": 2,
+            "id": "35c4105b-fdb5-492f-9607-8bffdb2deb33",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-simple-linear",
+                "uuid": "35c4105b-fdb5-492f-9607-8bffdb2deb33",
+                "config": {
+                  "displayName": "Ind",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.propulsion.main.seaWaterInTemperature",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": "V",
+                      "convertUnitTo": "celsius",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -5,
+                    "upper": 30,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "simpleLinear",
+                    "unitLabelFormat": "abr"
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "ignoreZones": false,
+                  "color": "green",
+                  "enableTimeout": false,
+                  "dataTimeout": 5
+                }
+              }
+            },
+            "x": 4,
+            "y": 9
+          },
+          {
+            "w": 4,
+            "h": 2,
+            "id": "97e8b96d-b4e5-493b-898b-63dff6b95132",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-simple-linear",
+                "uuid": "97e8b96d-b4e5-493b-898b-63dff6b95132",
+                "config": {
+                  "displayName": "Ud",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.propulsion.main.seaWaterOutTemperature",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": "V",
+                      "convertUnitTo": "celsius",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -5,
+                    "upper": 30,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "simpleLinear",
+                    "unitLabelFormat": "abr"
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "ignoreZones": false,
+                  "color": "green",
+                  "enableTimeout": false,
+                  "dataTimeout": 5
+                }
+              }
+            },
+            "x": 4,
+            "y": 11
+          },
+          {
+            "x": 4,
+            "y": 13,
+            "w": 4,
+            "h": 2,
+            "minW": 1,
+            "minH": 1,
+            "id": "f8c8fa82-9826-46fb-bfc6-f0fb06b40c34",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-simple-linear",
+                "uuid": "f8c8fa82-9826-46fb-bfc6-f0fb06b40c34",
+                "config": {
+                  "displayName": "Delta",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.propulsion.main.seaWaterDeltaTemperature",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": "V",
+                      "convertUnitTo": "celsius",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -5,
+                    "upper": 30,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "simpleLinear",
+                    "unitLabelFormat": "abr"
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "ignoreZones": false,
+                  "color": "green",
+                  "enableTimeout": false,
+                  "dataTimeout": 5
+                }
+              }
+            }
+          },
+          {
+            "x": 0,
+            "y": 22,
+            "w": 6,
+            "h": 2,
+            "minW": 1,
+            "minH": 1,
+            "id": "943984cd-ec0d-4750-a4c7-3794270721f7",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-iframe",
+                "uuid": "943984cd-ec0d-4750-a4c7-3794270721f7",
+                "config": {
+                  "widgetUrl": "http://localhost:3000/plugins/signalk-node-red/redApi/dashboard/page1",
+                  "allowInput": true
+                }
+              }
+            }
+          }
+        ],
+        "collapseSplitShell": false
+      },
+      {
+        "id": "32a26914-1eff-4262-914b-7a63ca439e0b",
+        "name": "Sejlads",
+        "icon": "dashboard-motor-boat",
+        "configuration": [],
+        "collapseSplitShell": false
+      }
+    ],
+    "theme": {
+      "themeName": ""
+    }
+  },
+  "Test": {
+    "app": {
+      "configVersion": 12,
+      "autoNightMode": true,
+      "redNightMode": false,
+      "nightModeBrightness": 0.27,
+      "isRemoteControl": false,
+      "instanceName": "",
+      "dataSets": [],
+      "unitDefaults": {
+        "Unitless": "unitless",
+        "Speed": "knots",
+        "Flow": "l/h",
+        "Temperature": "celsius",
+        "Length": "m",
+        "Volume": "liter",
+        "Current": "A",
+        "Potential": "V",
+        "Charge": "C",
+        "Power": "W",
+        "Energy": "J",
+        "Pressure": "mmHg",
+        "Fuel Distance": "nm/l",
+        "Energy Distance": "nm/kWh",
+        "Density": "kg/m3",
+        "Time": "Hours",
+        "Angular Velocity": "deg/min",
+        "Angle": "deg",
+        "Frequency": "Hz",
+        "Ratio": "ratio",
+        "Resistance": "ohm"
+      },
+      "notificationConfig": {
+        "disableNotifications": false,
+        "menuGrouping": true,
+        "security": {
+          "disableSecurity": true
+        },
+        "devices": {
+          "disableDevices": false,
+          "showNormalState": false,
+          "showNominalState": false
+        },
+        "sound": {
+          "disableSound": false,
+          "muteNormal": true,
+          "muteNominal": true,
+          "muteWarn": true,
+          "muteAlert": false,
+          "muteAlarm": false,
+          "muteEmergency": false
+        }
+      },
+      "splitShellEnabled": false,
+      "splitShellSide": "left",
+      "splitShellWidth": 0.5,
+      "splitShellSwipeDisabled": false
+    },
+    "dashboards": [
+      {
+        "id": "37cc8bb3-32a1-4541-823b-5fecf26be2f1",
+        "name": "Electrical",
+        "icon": "dashboard-car-battery",
+        "configuration": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 7,
+            "h": 2,
+            "minW": 1,
+            "minH": 1,
+            "id": "30fd5d0d-df42-4bed-a0c4-89d903d38237",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-label",
+                "uuid": "30fd5d0d-df42-4bed-a0c4-89d903d38237",
+                "config": {
+                  "displayName": "Forbrugsbatteri",
+                  "color": "green",
+                  "bgColor": "grey",
+                  "noColor": false,
+                  "noBgColor": true
+                }
+              }
+            }
+          },
+          {
+            "w": 7,
+            "h": 2,
+            "id": "b01a95e8-56e5-40c5-8dab-073b50d7d6ce",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-label",
+                "uuid": "b01a95e8-56e5-40c5-8dab-073b50d7d6ce",
+                "config": {
+                  "displayName": "Startbatteri",
+                  "color": "green",
+                  "bgColor": "grey",
+                  "noColor": false,
+                  "noBgColor": true
+                }
+              }
+            },
+            "x": 7,
+            "y": 0
+          },
+          {
+            "w": 3,
+            "h": 6,
+            "id": "ba4673b4-669c-44e9-b365-615a8ef19220",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "ba4673b4-669c-44e9-b365-615a8ef19220",
+                "config": {
+                  "displayName": "Spænding",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.starter.voltage",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "V",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": 4,
+                    "upper": 15,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "left",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            },
+            "x": 0,
+            "y": 2
+          },
+          {
+            "x": 3,
+            "y": 2,
+            "w": 3,
+            "h": 6,
+            "minW": 1,
+            "minH": 1,
+            "id": "fe2deba6-7d7e-4d08-8db8-17df88a6b266",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "fe2deba6-7d7e-4d08-8db8-17df88a6b266",
+                "config": {
+                  "displayName": "Amps",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.starter.current",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "A",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -10,
+                    "upper": 10,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "middle",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "x": 6,
+            "y": 2,
+            "h": 6,
+            "minW": 1,
+            "minH": 1,
+            "id": "ac58c1a5-3755-472a-b63b-e2a646b6149c",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-linear",
+                "uuid": "ac58c1a5-3755-472a-b63b-e2a646b6149c",
+                "config": {
+                  "displayName": "Temperatur",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.starter.temperature",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "celsius",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -5,
+                    "upper": 40,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngLinear",
+                    "subType": "vertical",
+                    "highlightsWidth": 5,
+                    "enableTicks": true,
+                    "enableNeedle": false
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "color": "green",
+                  "enableTimeout": false,
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "x": 7,
+            "y": 2,
+            "w": 3,
+            "h": 6,
+            "minW": 1,
+            "minH": 1,
+            "id": "3faea66c-bb62-41e4-84d8-c6c2b060f638",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "3faea66c-bb62-41e4-84d8-c6c2b060f638",
+                "config": {
+                  "displayName": "Voltage",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.house.voltage",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "V",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": 11,
+                    "upper": 15,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "left",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            }
+          },
+          {
+            "w": 3,
+            "h": 6,
+            "id": "4d676810-3d1b-4239-a093-51671b4bf078",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-radial",
+                "uuid": "4d676810-3d1b-4239-a093-51671b4bf078",
+                "config": {
+                  "displayName": "Amps",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.house.current",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "A",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -10,
+                    "upper": 10,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngRadial",
+                    "subType": "measuring",
+                    "highlightsWidth": 5,
+                    "scaleStart": 180,
+                    "barStartPosition": "middle",
+                    "enableTicks": true,
+                    "enableProgressbar": true,
+                    "enableNeedle": true
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "enableTimeout": false,
+                  "color": "green",
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            },
+            "x": 10,
+            "y": 2
+          },
+          {
+            "h": 6,
+            "id": "e4ae0783-53ef-40df-a5ec-e0ecea1e7f04",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-gauge-ng-linear",
+                "uuid": "e4ae0783-53ef-40df-a5ec-e0ecea1e7f04",
+                "config": {
+                  "displayName": "Temperatur",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Numeric Data",
+                      "path": "self.electrical.batteries.house.temperature",
+                      "source": "default",
+                      "pathType": "number",
+                      "isPathConfigurable": true,
+                      "showPathSkUnitsFilter": true,
+                      "pathSkUnitsFilter": null,
+                      "convertUnitTo": "celsius",
+                      "sampleTime": 500
+                    }
+                  },
+                  "displayScale": {
+                    "lower": -5,
+                    "upper": 40,
+                    "type": "linear"
+                  },
+                  "gauge": {
+                    "type": "ngLinear",
+                    "subType": "vertical",
+                    "highlightsWidth": 5,
+                    "enableTicks": true,
+                    "enableNeedle": false
+                  },
+                  "numInt": 1,
+                  "numDecimal": 1,
+                  "color": "green",
+                  "enableTimeout": false,
+                  "dataTimeout": 5,
+                  "ignoreZones": false
+                }
+              }
+            },
+            "x": 13,
+            "y": 2
+          }
+        ],
+        "collapseSplitShell": false
+      },
+      {
+        "id": "96e722ec-f77a-4da6-a805-ef8967a3a420",
+        "name": "Dashboard 2",
+        "icon": "dashboard-dashboard",
+        "configuration": [
+          {
+            "x": 6,
+            "y": 5,
+            "w": 9,
+            "h": 4,
+            "minW": 1,
+            "minH": 1,
+            "id": "9f2344dd-60f8-4b11-b48b-a8d47f3b78f6",
+            "selector": "widget-host2",
+            "input": {
+              "widgetProperties": {
+                "type": "widget-datetime",
+                "uuid": "9f2344dd-60f8-4b11-b48b-a8d47f3b78f6",
+                "config": {
+                  "displayName": "Time Label",
+                  "filterSelfPaths": true,
+                  "paths": {
+                    "gaugePath": {
+                      "description": "Date / Time",
+                      "path": null,
+                      "source": null,
+                      "pathType": "Date",
+                      "isPathConfigurable": true,
+                      "sampleTime": 1000
+                    }
+                  },
+                  "dateFormat": "dd/MM/yyyy HH:mm:ss",
+                  "dateTimezone": "Atlantic/Azores",
+                  "color": "contrast",
+                  "enableTimeout": false,
+                  "dataTimeout": 5
+                }
+              }
+            }
+          }
+        ],
+        "collapseSplitShell": false
+      }
+    ],
+    "theme": {
+      "themeName": ""
+    }
+  }
+}
