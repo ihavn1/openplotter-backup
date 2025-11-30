@@ -1,0 +1,1 @@
+{"name":"signalk-server-config","version":"0.0.1","description":"This file is here to track your plugin and webapp installs.","repository":{},"license":"Apache-2.0","dependencies":{"@mxtommy/kip":"^4.0.7","@signalk/signalk-node-red":"^4.1.0","signalk-n2kais-to-nmea0183":"^2.0.3","signalk-to-nmea2000":"^2.23.1"}}

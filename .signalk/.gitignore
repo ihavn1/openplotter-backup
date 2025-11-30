@@ -1,0 +1,16 @@
+# Signal K Configuration Folder Ignores
+
+# Plugin binaries - MUST be ignored
+node_modules/
+
+# Internal Signal K Cache & Data (can be re-generated)
+cache/
+applicationData/
+session/
+
+# Logs
+log/
+
+# Secrets (like client_secrets.json) should be reviewed and ignored if present
+# *.secret
+# *credentials*

@@ -1,0 +1,63 @@
+{
+  "allow_readonly": true,
+  "expiration": "NEVER",
+  "secretKey": "07a70d4045a947cfb21236f32601004e82ca446f0bf441e1bfab0d57cdb6f0c1a5a92ebd3aaa4814816a65697f9d94a84b784ca933d6417b8f23a163dfb15529bfa4c37d98ce49fa90a329c08cbf2a0bbef4692538de4c119175975a634ca88c58119c220b584c3ab3bcc2ad16647f1249aeaa91cb4a4c5981fdc0cab9b6e52c42c9bc3fa35e4289a16483abe0b10921f85da8f3c8244bf492699a79fd5aa369124e8686188442a49c5a655db0a8762a9a15fa7102564f118d1924dff5115f83f3bd8940fc244474a47161bf3a335ceb651f346b424e4d4da0969a035ab308c056cc75cacac3486ca3a7d94144459a4eb226e48cb0d7439ab36d6c9736ae9ad1",
+  "users": [
+    {
+      "username": "iha",
+      "type": "admin",
+      "password": "$2a$10$/.Yz5V/ThOKe3WCIWlsZeeSIo47t6OtrbYOnDpdkWyh4ydxET6kiK"
+    },
+    {
+      "username": "iha",
+      "type": "admin",
+      "password": "$2a$10$z3GCFObJMsjqpT4/15H9FuYSfKwzeaqtzSBv2FgL2zhMXry2fwXem"
+    }
+  ],
+  "devices": [
+    {
+      "clientId": "GPIO-9a33-4575-83e3-dfe29324d9ae",
+      "permissions": "readwrite",
+      "description": "OpenPlotter GPIO"
+    },
+    {
+      "clientId": "NOTIFICATIONS-0bb6-4c44-bc76-cefc1d165514",
+      "permissions": "readwrite",
+      "description": "OpenPlotter NOTIFICATIONS"
+    },
+    {
+      "clientId": "I2C-7a09-4195-a973-f832273d4b16",
+      "permissions": "readwrite",
+      "description": "OpenPlotter I2C"
+    },
+    {
+      "clientId": "MAIANA-1e04-46fe-858d-5e76b978e81a",
+      "permissions": "readwrite",
+      "description": "OpenPlotter MAIANA"
+    },
+    {
+      "clientId": "PYPILOT-e12d-4684-a72e-1c8b8dcc379d",
+      "permissions": "readwrite",
+      "description": "OpenPlotter PYPILOT"
+    },
+    {
+      "clientId": "IOB-e2ff-4dc8-8d29-e903b285f29e",
+      "permissions": "readwrite",
+      "description": "OpenPlotter IOB"
+    },
+    {
+      "clientId": "052ff04c-a37d-ba6a-b499-5db601659da3",
+      "permissions": "readwrite",
+      "description": "SensESP device: battery-sensors"
+    },
+    {
+      "clientId": "43cf71bd-8e73-f79e-d750-88b49fe1e3c6",
+      "permissions": "readwrite",
+      "description": "SensESP device: engine-bay"
+    }
+  ],
+  "immutableConfig": false,
+  "acls": [],
+  "allowDeviceAccessRequests": true,
+  "allowNewUserRegistration": true
+}

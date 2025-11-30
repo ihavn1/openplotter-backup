@@ -1,0 +1,4 @@
+share: /home/pi/.local/share
+lib64: /home/pi/.local/lib
+lib: /home/pi/.local/lib
+bin: /home/pi/.local/bin

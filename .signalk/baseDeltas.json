@@ -1,0 +1,174 @@
+[
+  {
+    "context": "vessels.self",
+    "updates": [
+      {
+        "values": [
+          {
+            "path": "",
+            "value": {
+              "name": "SigGa",
+              "mmsi": "4711",
+              "communication": {
+                "callsignVhf": "XPH5280"
+              }
+            }
+          },
+          {
+            "path": "design.draft",
+            "value": {
+              "maximum": 1
+            }
+          },
+          {
+            "path": "design.length",
+            "value": {
+              "overall": 8
+            }
+          },
+          {
+            "path": "design.beam",
+            "value": 2.7
+          },
+          {
+            "path": "design.airHeight",
+            "value": 2.5
+          },
+          {
+            "path": "sensors.gps.fromBow",
+            "value": 0
+          },
+          {
+            "path": "sensors.gps.fromCenter",
+            "value": 0
+          },
+          {
+            "path": "design.aisShipType",
+            "value": {
+              "name": "Pleasure",
+              "id": 37
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "context": "vessels.self",
+    "updates": [
+      {
+        "meta": [
+          {
+            "path": "electrical.batteries.house.voltage",
+            "value": {
+              "units": "V",
+              "description": "Voltage measured at or as close as possible to the device",
+              "displayName": "Voltage",
+              "zones": [
+                {
+                  "upper": 11.5,
+                  "lower": 0,
+                  "state": "alarm",
+                  "message": "Forbrugsbatteri spanding lav"
+                },
+                {
+                  "upper": 12,
+                  "lower": 11.5,
+                  "state": "warn",
+                  "message": "Forbrugsbatteri spanding lav"
+                },
+                {
+                  "upper": 20,
+                  "lower": 12,
+                  "state": "nominal",
+                  "message": ""
+                }
+              ]
+            }
+          },
+          {
+            "path": "electrical.batteries.starter.voltage",
+            "value": {
+              "units": "V",
+              "description": "Voltage measured at or as close as possible to the device",
+              "displayName": "Voltage",
+              "zones": [
+                {
+                  "upper": 11.5,
+                  "lower": 0,
+                  "state": "alarm",
+                  "message": "Startbatteri Spænding for LAV!!"
+                },
+                {
+                  "upper": 12,
+                  "lower": 11.5,
+                  "state": "warn",
+                  "message": "Startbatteri Spænding LAV!!"
+                },
+                {
+                  "upper": 20,
+                  "lower": 12,
+                  "state": "nominal",
+                  "message": ""
+                }
+              ]
+            }
+          },
+          {
+            "path": "propulsion.main.seaWaterDeltaTemperature",
+            "value": {
+              "units": "K",
+              "zones": [
+                {
+                  "upper": 275,
+                  "lower": 263.2,
+                  "state": "nominal",
+                  "message": ""
+                },
+                {
+                  "upper": 285.2,
+                  "lower": 275,
+                  "state": "warn",
+                  "message": "Havvands Køling er dårlig!"
+                },
+                {
+                  "upper": 373.2,
+                  "lower": 285.2,
+                  "state": "alarm",
+                  "message": "Havvands Køling fejler!!!"
+                }
+              ]
+            }
+          },
+          {
+            "path": "propulsion.main.coolantTemperature",
+            "value": {
+              "units": "K",
+              "description": "Coolant temperature",
+              "zones": [
+                {
+                  "upper": 358.2,
+                  "lower": 0,
+                  "state": "nominal",
+                  "message": ""
+                },
+                {
+                  "upper": 362.2,
+                  "lower": 358.2,
+                  "state": "warn",
+                  "message": ""
+                },
+                {
+                  "upper": 1000,
+                  "lower": 362.2,
+                  "state": "alarm",
+                  "message": ""
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
