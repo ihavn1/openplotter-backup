@@ -1,0 +1,28 @@
+# ====== OpenPlotter Backup Ignore ======
+
+# Node-RED dependencies
+node_modules/
+**/node_modules/
+
+# OpenCPN chart databases (HUGE - do not upload)
+.opencpn/charts/
+.opencpn/SENC/
+.opencpn/Chart*cache*/
+.opencpn/o_charts_pi/DownloadCache/
+
+# OpenCPN Notifications
+.opencpn/notifications/
+
+# SignalK cache and data that regenerates
+.signalk/plugin-data-cache/
+.signalk/storage/
+.opencpn/iconCacheSVG/
+.opencpn/plugins/cache/
+
+# Logs
+*.log
+*.tmp
+*.bak
+
+# Editor junk
+*~
